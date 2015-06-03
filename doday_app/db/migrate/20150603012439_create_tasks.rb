@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :task_ID
       t.text :task_description
       t.string :time_frame
-      t.binary :priority
+      t.boolean :priority
       t.boolean :completed
 
       t.timestamps null: false
