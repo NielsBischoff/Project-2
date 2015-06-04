@@ -1,18 +1,18 @@
-class tasksController < ApplicationController
+class TasksController < ApplicationController
   def index
-    @tasks = task.all
+    @tasks = Task.all
   end
 
   def new
-    @task = task.new
+    @task = Task.new
   end
 
   def create
-    @task = task.new(task_params)
+    @task = Task.new(task_params)
     if @task.save
       redirect_to tasks_path
     else
-      render :new
+      render "new"
     end
   end
 
@@ -21,7 +21,7 @@ class tasksController < ApplicationController
      @task.destroy
      redirect_to items_path
    end
-   
+
   private
 
   def task_params
