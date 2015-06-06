@@ -3,6 +3,8 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+  edit update show
+
   def new
     @task = Task.new
   end

@@ -1,9 +1,11 @@
-
-<h1>Welcome to Doday <%= current_user.user_name %>!</h1>
+<% if current_user %>
+  <%= current_user %>
+<% end %>
+<h1>Welcome to Doday !</h1>
 <h2>What goal would you like to achieve?</h2>
 
   <ul>
-    <% @users.each do |user| %>
-
+    <% @users.each do |u| %>
+    <%= u.user_name %>
     <% end %>
 </ul>

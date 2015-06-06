@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603025434) do
+ActiveRecord::Schema.define(version: 20150605232429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "goals", force: :cascade do |t|
+    t.string   "goal_id"
+    t.text     "goal_description"
+    t.datetime "timeframe"
+    t.string   "tag"
+    t.boolean  "priority"
+    t.boolean  "completed"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string   "task_ID"
@@ -39,8 +50,9 @@ ActiveRecord::Schema.define(version: 20150603025434) do
   create_table "users", force: :cascade do |t|
     t.string   "user_name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   add_foreign_key "taskusers", "tasks"

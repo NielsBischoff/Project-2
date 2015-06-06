@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  goal_id: MyString
+  goal_description: MyText
+  timeframe: 2015-06-05 16:24:29
+  tag: MyString
+  priority: false
+  completed: false
+
+two:
+  goal_id: MyString
+  goal_description: MyText
+  timeframe: 2015-06-05 16:24:29
+  tag: MyString
+  priority: false
+  completed: false
