@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   # config/routes.rb
 resources :users do
   resources :goals
@@ -17,6 +18,8 @@ end
   root "users#index"
   resources :users
   resources :tasks
+
+  #root 'posts#index'
 
   #get "users" => "users#index"
 
